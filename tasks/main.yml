@@ -6,7 +6,7 @@
   changed_when: false
 
 - name: Download get-pip.py
-  get_url: url=https://bootstrap.pypa.io/get-pip.py
+  get_url: url=https://raw.githubusercontent.com/pypa/get-pip/0b40331111ebaa4401844f804f990a5e6ba2192d/get-pip.py
            dest=/tmp/get-pip.py
   when: pip_version_output | failed or not pip_version_output.stdout | search(pip_version)
 
